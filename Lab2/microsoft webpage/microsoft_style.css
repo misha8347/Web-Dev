@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.top-panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo{
+    margin-left: 100px;
+    margin-right: 20px;
+}
+
+
+.upper-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.left-menu{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+}
+
+.upper-menu2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10%;
+}
+
+.right-menu{
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.products{
+    width: 180px;
+}
+
+.login{
+    margin-left: 15px;
+}
+
+
+.microsoft-365-background{
+    width: 100%;
+    position: relative;
+}
+
+.microsoft-365-photo{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.main-application-overlay{
+    position: absolute;
+    width: 400px;
+    left: 10%;
+    top: 10%;
+    padding: 1rem;
+    margin: 4px;
+}
+
+.main-application-button{
+    background-color: black;
+    /* background-color: #0067b8; */
+    color: #fff;
+    width: 180px;
+    height: 40px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.extra-applications{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+}
+
+.microsoft-applications{
+    width: 20%;
+    margin: 2% 2% 2% 2%;
+}
+
+.windows-updates-people{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 60px;
+}
