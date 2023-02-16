@@ -1,0 +1,23 @@
+<!doctype html>
+<script src="https://en.js.cx/test/libs.js"></script>
+<script src="test.js"></script>
+<script>
+
+  function Accumulator(initialValue){
+    this.value = initialValue;
+
+      this.read = function(){
+      let value = +prompt("Add value:", 0);
+      this.value += value;
+    }
+  }
+
+  let accumulator = new Accumulator(1);
+
+  accumulator.read();
+  accumulator.read();
+
+  alert(accumulator.value);
+</script>
+
+</html>

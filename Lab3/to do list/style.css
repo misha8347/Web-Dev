@@ -1,0 +1,56 @@
+#tasks .task{
+    display: flex;
+    width: 40%;
+    border: 1px solid;
+    /* background-color: yellow; */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    margin: auto;
+}
+
+/* .task .textField{
+    width: 50%;
+}
+
+.task .textValue{
+    width: 50%;
+} */
+.task{
+    display: inline-block;
+    
+}
+
+.text{
+    width: 300px;
+    padding: 5px;
+}
+
+header{
+    margin: auto;
+    text-align: center;
+}
+
+.text.checked{
+    text-decoration: line-through;
+}
+
+#newTaskInput{
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 3%;
+}
+
+#newTaskAdd{
+    padding: 10px;
+    background-color: #1877f2;
+    color: #fff;
+    font-weight: bold;
+    /* font-size: 16px; */
+}
+
+.deleteButton{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
