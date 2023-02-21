@@ -1,0 +1,22 @@
+<div *ngFor="let product of products" class="product-element">
+    <img src={{product.image}} class="product-image">
+    <br>
+    <div class="line"></div>
+    <div class="info">
+      <a 
+        [title]="product.name + ' details'" 
+        [routerLink]="['/products', product.id]" 
+        class="link">
+        {{ product.name }}
+      </a>
+      <div class="rating">rating: {{product.rating}}</div>
+      <div class="cost">cost: {{product.cost}} ₸</div>
+      <div class="description">description: {{product.description}}</div>
+      <div class="link"><a href={{product.link}}>link</a></div>
+
+      
+<button type="button" (click)="share()"><a href="https://telegram.me/share/url?url={{ product.link }}" target="_blank">Share</a></button>
+
+    </div>
+    
+</div>
