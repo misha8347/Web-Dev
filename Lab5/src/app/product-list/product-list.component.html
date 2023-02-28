@@ -1,0 +1,24 @@
+<h1 style="text-align: center; font-size: 50px;">Products</h1>
+<form>  
+  <select name = "category" [(ngModel)]="selectedCategory" (change)="getFilteredProducts()" id="select1">
+    <!-- <option *ngFor="let category of getCategories(products)">{{category}}</option> -->
+    <option value="Drink">Drink</option>
+    <option value="Smartphone">Smartphone</option>
+    <option value="earphones">Earphones</option>
+    <option value="mouse">Mouse</option>
+  </select>
+</form>
+
+
+
+
+<div class="product-list">
+  <div *ngFor="let product of selectedProducts" class="product-element">
+    <app-product-item [product]="product" (remove)="onNewTaskRemove($event)"></app-product-item>
+  </div>
+</div>
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

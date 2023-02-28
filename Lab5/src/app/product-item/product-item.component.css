@@ -1,0 +1,46 @@
+.product-image{
+    width: 150px;
+    height: 220px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.line{
+    align-items: center;
+    border-bottom: 2px solid #dadde1;
+    display: flex;
+    margin: 20px 16px;
+    text-align: center;
+}
+
+.link{
+    color: #0089d0;
+}
+
+.info{
+    margin: auto;
+    width: 268px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+
+.element{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px; 
+}
+
+.likes{
+    border: 1px solid;
+    padding: 10px 10px 10px;
+}

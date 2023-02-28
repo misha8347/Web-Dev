@@ -1,0 +1,27 @@
+<img src={{product.image}} class="product-image">
+<br>
+<div class="line"></div>
+
+
+<div class="info">
+    <h3>
+    <a
+        [title]="product.name + ' details'"
+        [routerLink]="['/products', product.id]"
+        >>
+        {{ product.name }}
+    </a>
+    </h3>
+    <div class="rating" style="font-size: 20px">rating: {{product.rating}}</div>
+    <div class="cost" style="font-size: 20px">cost: {{product.cost}} ₸</div>
+</div>
+
+<div class="buttons">
+    <button type="button" class="element" (click)="share()"><a href="https://telegram.me/share/url?url={{ product.link }}" target="_blank" style="color: white; font-weight: bold;">Share</a></button>
+    <button type="button" class="element" (click)="removeProduct()"style="color: white; font-weight: bold;">Delete</button>
+</div>
+
+<div class="buttons">
+    <button type="button" class="element" (click)="like()"style="color: white; font-weight: bold;">Like</button>
+    <div class="likes element">{{ product.likesAmount }}</div>
+</div>

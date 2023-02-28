@@ -1,0 +1,9 @@
+<h2 style="margin: auto; width: 20%; margin-bottom: 30px;">Product Details</h2>
+
+<div *ngIf="product" class="info">
+    <img src={{product.image}} style="width: 60%">
+    <h3>{{ product.name }}</h3>
+    <h4>{{ product.cost }} ₸</h4>
+    <p>{{ product.description }}</p>
+    <a href="{{product.link}}">link to kaspi</a>
+</div>
