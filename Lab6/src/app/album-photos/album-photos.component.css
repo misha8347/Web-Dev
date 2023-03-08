@@ -1,0 +1,15 @@
+
+.main-part{
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.return-back-button{
+    width: 150px;
+    height: 10%;
+    font-size: 25px;
+    right: 5%;
+    top: 5%;
+    position: fixed;
+}

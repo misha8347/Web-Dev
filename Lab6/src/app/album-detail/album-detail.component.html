@@ -1,0 +1,14 @@
+<h1>Album detail #{{album.id}}</h1>
+<h1>{{album.title}}</h1>
+<div *ngIf="!album.isDeleted" class="album-details">
+    <div>
+        <input type="text" [(ngModel)]="inputValue" placeholder="Change title">
+        <button type="button" (click)="changeTitle()"> Save</button>
+    </div>
+    <a [routerLink]="['/albums', album.id, 'photos']">Link to photos</a>
+    <button type="button" class="return-back-button" [routerLink]="['/albums']">Return back</button>
+</div>
+
+<div *ngIf="album.isDeleted">
+    <p>Current album is deleted!</p>
+</div>

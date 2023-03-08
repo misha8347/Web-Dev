@@ -1,0 +1,11 @@
+<p style="font-size: 26px;">album-photos works!</p>
+
+<div class="main-part">
+    <ul>
+        <li *ngFor="let photo of photos">
+            <img src="{{photo.url}}">
+        </li>
+    </ul>
+    <button class="return-back-button" [routerLink]="['/albums', albumId]">Return back</button>
+   
+</div>

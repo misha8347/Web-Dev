@@ -1,0 +1,9 @@
+.album-details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.return-back-button{
+    width: 100px;
+}

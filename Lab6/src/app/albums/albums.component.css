@@ -1,0 +1,7 @@
+.album-item{
+    display: flex;
+    justify-content: flex-start;
+    gap: 3%;
+    /* border: 1px solid; */
+    margin-bottom: 10px;
+}
