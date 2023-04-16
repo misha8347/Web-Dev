@@ -1,0 +1,9 @@
+<p>events-details works!</p>
+
+<div *ngIf="event">
+    <h1>{{event.name}}</h1>
+    <img src="{{event.image}}" style="width: 300px;">
+    <p>{{event.description}}</p>
+    <p>Start time: {{event.date_time}}</p>
+    <button [routerLink]="['/events']" (click)="deleteEvent()">Delete event</button>
+</div>

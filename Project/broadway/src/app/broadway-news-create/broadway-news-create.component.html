@@ -1,0 +1,14 @@
+<form id="myForm">
+    <br>
+    <br>
+    Title:<input type="text" name="title" [(ngModel)]="newsTitle" required>
+    <br>
+    <br>
+    Text:<input type="text" name="text" [(ngModel)]="newsText" required>
+    <br>
+    <br>
+    Image:<input type="text" name="image" [(ngModel)]="newsImage" required>
+    <br>
+    <br>
+    <button type="button" (click)="postNews()" [routerLink]="['/news']">post News</button>
+</form>

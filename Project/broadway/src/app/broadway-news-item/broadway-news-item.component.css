@@ -1,0 +1,14 @@
+.news-item{
+    display: flex;
+    gap: 30px;
+    padding: 50px;
+}
+
+.news-image{
+    /* position: relative; */
+    /* top: 20px;
+    left: 20px; */
+    width: 339px;
+    height: 254px;
+}
+
