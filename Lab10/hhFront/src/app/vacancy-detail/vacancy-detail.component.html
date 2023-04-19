@@ -1,0 +1,15 @@
+<p>vacancy-detail works!</p>
+
+<div *ngIf="vacancy">
+    <h1>{{vacancy.name}}</h1>
+    <p>{{vacancy.description}}</p>
+    <h4>salary: {{vacancy.salary}}</h4>
+    <div>
+        <button [routerLink]="['/companies', vacancy.company.id]">Link to the company</button>
+    </div>
+    <br>
+    <br>
+    <div>
+        <button [routerLink]="['/vacancies']" (click)="deleteVacancy()">Delete vacancy</button>
+    </div>
+</div>

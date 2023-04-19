@@ -1,0 +1,5 @@
+
+<div *ngIf="company" class="company-item">
+    {{company.name}}
+    <button [routerLink]="['/companies', company.id]">More detail</button>
+</div>

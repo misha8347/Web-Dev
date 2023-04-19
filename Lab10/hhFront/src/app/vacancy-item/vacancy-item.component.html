@@ -1,0 +1,9 @@
+<div *ngIf="vacancy" class="vacancy-item">
+    <h1>{{vacancy.name}}</h1>
+    <p>{{vacancy.description}}</p>
+    <h4>salary: {{vacancy.salary}}</h4>
+    <p>Company: {{vacancy.company.name}}</p>
+    <div>
+        <button [routerLink]="['/vacancies', vacancy.id]">More details</button>
+    </div>
+</div>

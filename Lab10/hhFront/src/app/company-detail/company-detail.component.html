@@ -1,0 +1,13 @@
+<p>company-detail works!</p>
+
+<div *ngIf="company">
+    <h1>{{company.name}}</h1>
+    <p>{{company.description}}</p>
+    <p>{{company.city}} / {{company.address}}</p>
+    <div>
+        <button [routerLink]="'/companies/' + company.id + '/vacancies'">Show vacancies of this company</button>
+    </div>
+    <div>
+        <button [routerLink]="['/companies']" (click)="deleteCompany()">Delete Company</button>
+    </div>
+</div>
