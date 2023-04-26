@@ -5,6 +5,28 @@
     </h2>
     <div class="featured-shows-container style-orzom" id="style-orzom">
       <div class="featured-shows-wrapper style-l4UDP" id="swiper-wrapper-476910a9c4f83bd9f">
+        <a *ngFor="let club of clubs_list" class="featured-show" [routerLink]="['/clubs', club.id]">
+          <div class="featured-show__img-container">
+            <img class="featured-show__img lazyloaded" src="{{club.logo}}" width="200" height="463">
+          </div>
+          <div class="featured-show__heading">
+            {{club.name}}
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- <section class="homepage__featured-shows">
+  <div class="homepage__featured-shows-container">
+    <h2 class="featured-shows__heading">
+      Clubs
+    </h2>
+    <div class="featured-shows-container style-orzom" id="style-orzom">
+      <div class="featured-shows-wrapper style-l4UDP" id="swiper-wrapper-476910a9c4f83bd9f">
         <a class="featured-show" href="/shows/some-it-hot/">
           <div class="featured-show__img-container">
             <img class="featured-show__img lazyloaded" src="https://imaging.broadway.com/images/poster-178275/w200/122185-9.jpg" width="200" height="463">
@@ -66,5 +88,5 @@
     <div id="dfp-home-d" class="style-yiG6V">
     </div>
   </div>
-</section>
+</section> -->
 

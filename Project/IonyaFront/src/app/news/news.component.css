@@ -159,7 +159,6 @@ a:link {
 
 img {
   vertical-align: middle;
-  -webkit-backface-visibility: hidden;
   -ms-interpolation-mode: bicubic;
 }
 

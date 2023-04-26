@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs"
-import { News, Event } from './models'
+import { News, Event, AuthToken } from './models'
 import { HttpClient } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
 })
+export class NewsApiService{
+  
+}
+
 export class ApiService {
 
   BASE_URL = 'http://localhost:8000'
@@ -14,6 +18,16 @@ export class ApiService {
   constructor(private client: HttpClient) { 
 
   }
+
+  //API for login
+
+  login(username: string, password: string): Observable<AuthToken> {
+    return this.client.post<AuthToken>(
+      `${this.BASE_URL}/api/login/`,
+      {username, password}
+    )
+  }
+
 
   //API for news
   getNewsList(): Observable<News[]>{

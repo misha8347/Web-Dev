@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoginComponent} from "../login/login.component";
+// import { LoginComponent} from "../login/login.component";
 import { MatDialog} from "@angular/material/dialog";
 
 @Component({
@@ -9,21 +9,7 @@ import { MatDialog} from "@angular/material/dialog";
 })
 export class HeaderComponent {
 
-  constructor(private LoginPage: MatDialog) {
+  constructor() {
   }
 
-
-  loginFunction(){
-    this.openDialog()
-  }
-
-
-  openDialog(){
-    this.LoginPage.open(LoginComponent,{
-      width: '30%',
-
-
-
-    });
-  }
  }

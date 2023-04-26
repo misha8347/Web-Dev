@@ -6,8 +6,10 @@ import { BroadwayNewsCreateComponent } from './broadway-news-create/broadway-new
 import { EventsComponent } from './events/events.component';
 import { EventsCreateComponent } from './events-create/events-create.component';
 import { EventsDetailsComponent } from './events-details/events-details.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
+  {path: 'login', component: AppComponent},
   {path: 'news', component: BroadwayNewsComponent},
   {path: 'news/create', component: BroadwayNewsCreateComponent},
   {path: 'news/:id', component: BroadwayNewsDetailsComponent},

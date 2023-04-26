@@ -1,14 +1,35 @@
+<ng-container *ngIf="!logged">
+    <h2>Login form</h2>
+    <div id="not-logged-in">
+        <fieldset class="field">
+            <label>Username: </label>
+            <input type="text" [(ngModel)]="username">
+        </fieldset>
+        <fieldset class="field">
+            <label>Password: </label>
+            <input type="password" [(ngModel)]="password">
+        </fieldset>
+        <button (click)="login()" id="login-button">Login</button>
+    </div>
+</ng-container>
 
-<h1>hello world!</h1>
-<button [routerLink]="['/news']">News</button>
-<br>
-<br>
-<button [routerLink]="['/news/create']">Create news</button>
-<br>
-<br>
-<button [routerLink]="['/events']">Events</button>
-<br>
-<br>
-<button [routerLink]="['/events/create']">Create events</button>
+
+<ng-container *ngIf="logged" id="logged-in">
+    <h1>hello world!</h1>
+    <button [routerLink]="['/news']">News</button>
+    <br>
+    <br>
+    <button [routerLink]="['/news/create']">Create news</button>
+    <br>
+    <br>
+    <button [routerLink]="['/events']">Events</button>
+    <br>
+    <br>
+    <button [routerLink]="['/events/create']">Create events</button>
+    <br>
+    <br>
+    <button [routerLink]="['/login']" (click)="logout()">Logout</button>
+</ng-container>
+
 
 <router-outlet></router-outlet>

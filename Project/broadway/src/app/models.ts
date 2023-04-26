@@ -17,3 +17,7 @@ export interface Event{
   likes: number;
   dislikes: number;
 }
+
+export interface AuthToken {
+  token: string;
+}

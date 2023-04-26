@@ -1,5 +1,9 @@
 from django.shortcuts import Http404
+from django.utils.encoding import smart_str
 
+from django.utils.decorators import method_decorator
+from rest_framework.decorators import permission_classes
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -9,6 +13,8 @@ from api.serializers import EventSerializer
 
 
 class EventListAPIView(APIView):
+    # permission_classes = (AllowAny,)
+
     def get(self, request):
         events = Event.objects.all()
         serializer = EventSerializer(events, many=True)
@@ -23,6 +29,8 @@ class EventListAPIView(APIView):
 
 
 class EventDetailAPIView(APIView):
+    # permission_classes = (AllowAny,)
+
     def get_object(self, event_id):
         try:
             return Event.objects.get(id=event_id)
