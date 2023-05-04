@@ -8,16 +8,21 @@ import { ApiService } from '../api.service';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent {
-  events_list: Event[] = [];
+  main_events_list: Event[] = [];
   constructor(private apiService: ApiService){}
   
   ngOnInit(){
-    this.getEventList();
+    this.getMainEvents()
   }
 
-  getEventList(){
-    return this.apiService.getEventList().subscribe((data) => {
-      this.events_list = data;
-    })
+  getMainEvents = () => {
+    this.apiService.getNewEvents().subscribe(
+      data => {
+        this.main_events_list = data;
+      },
+      error => {
+        console.log(error);
+      }
+    )
   }
 }

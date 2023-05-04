@@ -5,7 +5,7 @@
     </h2>
     <div class="featured-shows-container style-orzom" id="style-orzom">
       <div class="featured-shows-wrapper style-l4UDP" id="swiper-wrapper-476910a9c4f83bd9f">
-        <a *ngFor="let club of clubs_list" class="featured-show" [routerLink]="['/clubs', club.id]">
+        <a class="featured-show" *ngFor="let club of clubs_list" [routerLink]="['/clubs', club.id]">
           <div class="featured-show__img-container">
             <img class="featured-show__img lazyloaded" src="{{club.logo}}" width="200" height="463">
           </div>
@@ -13,80 +13,12 @@
             {{club.name}}
           </div>
         </a>
-      </div>
-    </div>
-  </div>
 
-</section>
-
-
-<!-- <section class="homepage__featured-shows">
-  <div class="homepage__featured-shows-container">
-    <h2 class="featured-shows__heading">
-      Clubs
-    </h2>
-    <div class="featured-shows-container style-orzom" id="style-orzom">
-      <div class="featured-shows-wrapper style-l4UDP" id="swiper-wrapper-476910a9c4f83bd9f">
-        <a class="featured-show" href="/shows/some-it-hot/">
-          <div class="featured-show__img-container">
-            <img class="featured-show__img lazyloaded" src="https://imaging.broadway.com/images/poster-178275/w200/122185-9.jpg" width="200" height="463">
-          </div>
-          <div class="featured-show__heading">
-            Some Like It Hot
-          </div>
-        </a>
-        <a class="featured-show" href="/shows/moulin-rouge-musical/">
-          <div class="featured-show__img-container">
-            <img class="featured-show__img lazyloaded" src="https://imaging.broadway.com/images/poster-178275/w200/120038-1.jpg" width="200" height="463">
-          </div>
-          <div class="featured-show__heading">
-            Moulin Rouge! The Musical
-          </div>
-        </a>
-        <a class="featured-show" href="/shows/mj/">
-          <div class="featured-show__img-container">
-            <img class="featured-show__img lazyloaded" src="https://imaging.broadway.com/images/poster-178275/w200/112926-12.jpg" width="200" height="463">
-          </div>
-          <div class="featured-show__heading">
-            MJ
-          </div>
-        </a>
-        <a class="featured-show" href="/shows/funny-girl/">
-          <div class="featured-show__img-container">
-            <img class="featured-show__img lazyloaded" src="https://imaging.broadway.com/images/poster-178275/w200/123211-3.jpg" width="200" height="463">
-          </div>
-          <div class="featured-show__heading">
-            Funny Girl
-          </div>
-        </a>
-        <a class="featured-show" href="/shows/juliet/">
-          <div class="featured-show__img-container">
-            <img class="featured-show__img lazyloaded" src="https://imaging.broadway.com/images/poster-178275/w200/123925-5.jpg" width="200" height="463">
-          </div>
-          <div class="featured-show__heading">
-            &amp; Juliet
-          </div>
-        </a>
-      </div>
-      <span>
-      </span>
-    </div>
-    <div class="featured-shows-next featured-shows-button--disabled">
-      <svg width="8" height="14" class="snipcss0-3-27-28" fill="none" style="" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1L0.96482 0L8 7L0.96482 14L0 13L6 7L0 1Z" fill="#343540">
-        </path>
-      </svg>
-    </div>
-    <div class="featured-shows-prev featured-shows-button--disabled">
-      <svg width="8" height="14" class="snipcss0-3-29-30" fill="none" style="transform: rotate(180deg);" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1L0.96482 0L8 7L0.96482 14L0 13L6 7L0 1Z" fill="#343540">
-        </path>
-      </svg>
     </div>
   </div>
   <div class="homepage__ad-container-d">
     <div id="dfp-home-d" class="style-yiG6V">
     </div>
   </div>
-</section> -->
+
 

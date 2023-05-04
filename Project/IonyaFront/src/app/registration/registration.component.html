@@ -1,0 +1,29 @@
+<h2>Registration form</h2>
+<div id="not-signed-up">
+    <fieldset class="field">
+        <label>First name: </label>
+        <input type="text" [(ngModel)]="first_name">
+    </fieldset>
+    <fieldset class="field">
+        <label>Last name: </label>
+        <input type="text" [(ngModel)]="last_name">
+    </fieldset>
+    <fieldset>
+        <label>Email: </label>
+        <input type="text" [(ngModel)]="email">
+    </fieldset>
+
+    <fieldset class="field">
+        <label>Username: </label>
+        <input type="text" [(ngModel)]="username">
+    </fieldset>
+    <fieldset class="field">
+        <label>Password: </label>
+        <input type="password" [(ngModel)]="password">
+    </fieldset>
+    <fieldset class="field">
+        <label>Repeat password: </label>
+        <input type="password" [(ngModel)]="repeat_password">
+    </fieldset>
+    <button (click)="register()" id="login-button">Login</button>
+</div>  

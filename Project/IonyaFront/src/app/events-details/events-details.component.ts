@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Event } from '../models';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-events-details',
@@ -11,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class EventsDetailsComponent {
   event: Event | undefined;
 
-  constructor(private apiService: ApiService, private route: ActivatedRoute){
+  constructor(private apiService: ApiService, private route: ActivatedRoute, private router: Router){
 
   }
 
@@ -30,6 +31,12 @@ export class EventsDetailsComponent {
       this.apiService.deleteEventElem(this.event.id).subscribe(response => {
         console.log(response);
       })
+    }
+  }
+
+  buyTickets() {
+    if(this.event){
+      this.router.navigate(['/tickets/buy'], { queryParams: { eventId: this.event.id } });
     }
   }
 }

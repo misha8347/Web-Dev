@@ -12,11 +12,11 @@ export class ClubsComponent {
   constructor(private apiService: ApiService){}
   
   ngOnInit(){
-    this.getClubList()
+    this.getMainClubs()
   }
 
-  getClubList(){
-    this.apiService.getClubList().subscribe((data) => {
+  getMainClubs(){
+    this.apiService.getMainClubs().subscribe((data) => {
       this.clubs_list = data;
     })
   }

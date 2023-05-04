@@ -13,7 +13,7 @@ from api.serializers import EventSerializer
 
 
 class EventListAPIView(APIView):
-    # permission_classes = (AllowAny,)
+    permission_classes = (AllowAny,)
 
     def get(self, request):
         events = Event.objects.all()
@@ -29,7 +29,7 @@ class EventListAPIView(APIView):
 
 
 class EventDetailAPIView(APIView):
-    # permission_classes = (AllowAny,)
+    permission_classes = (AllowAny,)
 
     def get_object(self, event_id):
         try:

@@ -4,4 +4,7 @@
     <p>{{event.description}}</p>
     <p>Start time: {{event.date_time}}</p>
     <button [routerLink]="['/events']" (click)="deleteEvent()">Delete event</button>
+    <br>
+    <br>
+    <button (click)="buyTickets()">Buy tickets</button>
 </div>

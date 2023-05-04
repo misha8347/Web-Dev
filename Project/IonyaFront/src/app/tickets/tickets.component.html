@@ -1,1 +1,18 @@
-<p>tickets works!</p>
+
+<div class="showlistpage__featured-shows">
+    <div class="swiper-carousel style-VSjIl" id="showlistpageCarousel">
+        <div class="swiper-carousel-wrapper style-N5ioD" id="swiper-wrapper-d109b71e9610e7abbc">
+            <a class="swiper-carousel-card"  *ngFor="let ticket of tickets_list" [routerLink]="['/tickets', ticket.id]">
+                <div class="showlistpage__featured-shows__card__media-tile">
+                <img class="showlistpage__featured-shows__card__img lazyloaded" src="{{getEventById(ticket.event)?.image}}">
+                </div>
+
+                <div class="showlistpage__featured-shows__card__body">
+                <div class="showlistpage__featured-shows__card__title">
+                    {{getEventById(ticket.event)?.name}} ticket
+                </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

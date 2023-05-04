@@ -1,9 +1,14 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import Group
 
 # Create your models here.
 
 User = get_user_model()
+    
+admin_group, created = Group.objects.get_or_create(name='Admins')
+editor_group, created = Group.objects.get_or_create(name='Editors')
+user_group, created = Group.objects.get_or_create(name='Users')
 
 
 class Location(models.Model):
@@ -11,6 +16,7 @@ class Location(models.Model):
     city = models.CharField(max_length=50)
     address = models.CharField(max_length=100)
     image = models.CharField(max_length=1500, default="https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg")
+    url = models.CharField(max_length=300, default="")
 
     class Meta():
         verbose_name = 'Location'
@@ -28,6 +34,9 @@ class Club(models.Model):
         verbose_name = 'Club'
         verbose_name_plural = 'Clubs'
 
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    club = models.ForeignKey(Club, on_delete=models.CASCADE)
 
 class News(models.Model):
     title = models.CharField(max_length=200)

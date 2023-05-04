@@ -1,0 +1,11 @@
+<h1>Create news</h1>
+
+<div class="news-create">
+    Title: <input type="text" [(ngModel)]="title" class="field">
+    Text: <input type="text" [(ngModel)]="text" class="field">
+    image link: <input type="text" [(ngModel)]="image" class="field">
+    Club: <select [(ngModel)]="selectedClub" class="clubs-select">
+        <option *ngFor="let club of clubs" [ngValue]="club">{{club.name}}</option>
+    </select>
+</div>
+<button class="button" (click)="createNews()">Create news</button>

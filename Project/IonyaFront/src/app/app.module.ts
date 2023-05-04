@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import {  HTTP_INTERCEPTORS,HttpClientModule } from '@angular/common/http';
-// import { AuthInterceptor} from "./AuthInterceptor";
+import { AuthInterceptor} from "./AuthInterceptor";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -23,6 +23,15 @@ import { ClubEventsComponent } from './club-events/club-events.component';
 import { ClubNewsComponent } from './club-news/club-news.component';
 import { LocationsComponent } from './locations/locations.component';
 import { LocationsDetailsComponent } from './locations-details/locations-details.component';
+import { EventsListComponent } from './events-list/events-list.component';
+import { ClubsListComponent } from './clubs-list/clubs-list.component';
+import { AboutPageComponent } from './about-page/about-page.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
+import { NewsListComponent } from './news-list/news-list.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { NewsCreateComponent } from './news-create/news-create.component';
+import { ClubsCreateComponent } from './clubs-create/clubs-create.component';
+import { TicketsBuyComponent } from './tickets-buy/tickets-buy.component';
 
 
 @NgModule({
@@ -42,6 +51,15 @@ import { LocationsDetailsComponent } from './locations-details/locations-details
     ClubNewsComponent,
     LocationsComponent,
     LocationsDetailsComponent,
+    EventsListComponent,
+    ClubsListComponent,
+    AboutPageComponent,
+    ContactPageComponent,
+    NewsListComponent,
+    RegistrationComponent,
+    NewsCreateComponent,
+    ClubsCreateComponent,
+    TicketsBuyComponent,
     // LoginComponent
   ],
   imports: [
@@ -53,11 +71,11 @@ import { LocationsDetailsComponent } from './locations-details/locations-details
     FormsModule
   ],
   providers: [
-    // {
-    //   provide: HTTP_INTERCEPTORS,
-    //   useClass: AuthInterceptor,
-    //   multi: true
-    // }
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

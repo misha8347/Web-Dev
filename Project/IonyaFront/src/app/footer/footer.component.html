@@ -1,13 +1,15 @@
 <footer>
   <div class="container">
     <p>Copyright © 2023 KBTU.com</p>
-    <nav>
+    <nav class = "all">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shows</a></li>
-        <li><a href="#">Tickets</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a [routerLink]="['/']">Home</a></li>
+        <li><a [routerLink]="['/events-list']">Events</a></li>
+        <li><a [routerLink]="['/clubs-list']">Clubs</a></li>
+        <li><a >News&Features</a></li>
+        <li><a >Tickets</a></li>
+        <li><a [routerLink]="['/about-page']">About Us</a></li>
+        <li><a [routerLink]="['/contact-page']">Contact Us</a></li>
       </ul>
     </nav>
   </div>

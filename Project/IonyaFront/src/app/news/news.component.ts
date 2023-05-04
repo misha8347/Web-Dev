@@ -8,18 +8,23 @@ import { ApiService } from '../api.service';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent {
-  news_list: News[] = []  
+  main_news_list: News[] = []
   constructor(private apiService: ApiService){
 
   }
 
   ngOnInit(){
-    this.getNews()
+    this.getMainNews();
   }
 
-  getNews(){
-    this.apiService.getNewsList().subscribe((data) => {
-      this.news_list = data
-    })
+  getMainNews = () => {
+    this.apiService.getMainNews().subscribe(
+      data => {
+        this.main_news_list = data;
+      },
+      error => {
+        console.log(error);
+      }
+    )
   }
 }

@@ -1,21 +1,19 @@
-export interface News{
+export interface User {
   id: number;
-  title: string;
-  text: string;
-  image: string;
-  likes: number;
-  dislikes: number;
+  username: string;
+  password: string;
+  email: string;
+  first_name: string;
+  last_name: string;
 }
-  
-export interface Event{
+
+export interface Location{
   id: number;
   name: string;
-  description: string;
+  city: string;
+  address: string;
   image: string;
-  date_time: Date;
-  organizer: string;
-  likes: number;
-  dislikes: number;
+  url: string;
 }
 
 export interface Club{
@@ -27,12 +25,40 @@ export interface Club{
   dislikes: number;
 }
 
-export interface Location{
+export interface Profile{
+  id: number;
+  user: User;
+  club: Club;
+}
+
+export interface News{
+  id: number;
+  title: string;
+  text: string;
+  club: Club;
+  image: string;
+  likes: number;
+  dislikes: number;
+}
+
+export interface Event{
   id: number;
   name: string;
-  city: string;
-  address: string;
+  description: string;
   image: string;
+  date_time: Date;
+  organizer: Club;
+  location: Location;
+  likes: number;
+  dislikes: number;
+}
+
+export interface Ticket {
+  id: number;
+  event: number;
+  user: number;
+  ticket_type: string;
+  standard_cost: number;
 }
 
 export interface AuthToken {

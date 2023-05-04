@@ -1,0 +1,15 @@
+<div *ngIf="event">
+    <h1>{{event.name}}</h1>
+    <img src="{{event.image}}" style="width: 250px">
+    <br>
+    <br>
+
+    Choose ticket type: <select [(ngModel)]="ticket_type" class="ticket-type-select">
+        <option value="standard">Standard</option>
+        <option value="VIP" >VIP</option>
+        <option value="premium">Premium</option>
+    </select>
+    <br>
+    <br>
+    <button class="button" (click)="buyTicket()">Buy ticket</button>
+</div>

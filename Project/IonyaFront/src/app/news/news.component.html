@@ -1,96 +1,21 @@
-<h2 id = "featured_news_heading">News
-</h2>
-<div class="buzz__container--small">
-  <a *ngFor="let news of news_list" class="buzz__card--small" href="/buzz/203155/erich-bergen-will-rejoin-chicago-as-billy-flynn/" [routerLink]="['/news', news.id]">
-    <div class="buzz__image-container--small">
-      <img class="buzz__image--small lazyloaded" width="107" height="80" src="{{news.image}}">
-    </div>
-    <div class="buzz__text--small">
-      <div class="buzz__category">
-        news
-      </div>
-      <div class="buzz__title--small">
-        {{news.text}}
-      </div>
-    </div>
-  </a>
-  <div class="buzz__divider">
-  </div>
-</div>
 
-<!-- <h2 id = "featured_news_heading">News
+<h2 id = "featured_news_heading" >News
 </h2>
-<div class="buzz__container--small">
-  <a class="buzz__card--small" href="/buzz/203155/erich-bergen-will-rejoin-chicago-as-billy-flynn/">
-    <div class="buzz__image-container--small">
-      <img class="buzz__image--small lazyloaded" width="107" height="80" src="https://imaging.broadway.com/images/regular-43/w345/123057-10.jpg">
-    </div>
-    <div class="buzz__text--small">
-      <div class="buzz__category">
-        News
+
+<ul class = "container_contents">
+  <div *ngFor="let news of main_news_list" class = "container" [routerLink]="['/news', news.id]"   >
+    <a class = "content" >
+      <div class = "image">
+        <img src="{{news.image}} " width="150" height="110">
       </div>
-      <div class="buzz__title--small">
-        Erich Bergen Will Rejoin
-        <i>
-          Chicago
-        </i>
-        as Billy Flynn
+      <div class = "texts">
+        <div class="text_red text">
+          news
+        </div>
+        <div class="text">
+          {{news.title}}
+        </div>
       </div>
-    </div>
-  </a>
-  <div class="buzz__divider">
+    </a>
   </div>
-  <a class="buzz__card--small" href="/buzz/203150/neil-patrick-harris-to-join-peter-pan-goes-wrong-for-a-limited-engagement/">
-    <div class="buzz__image-container--small">
-      <img class="buzz__image--small lazyloaded" width="107" height="80" src="https://imaging.broadway.com/images/regular-43/w345/107195-14.jpeg">
-    </div>
-    <div class="buzz__text--small">
-      <div class="buzz__category">
-        News
-      </div>
-      <div class="buzz__title--small">
-        Neil Patrick Harris to Join
-        <i>
-          Peter Pan Goes Wrong
-        </i>
-        For a Limited Engagement
-      </div>
-    </div>
-  </a>
-  <div class="buzz__divider">
-  </div>
-  <a class="buzz__card--small" href="/buzz/203149/once-upon-a-one-more-time-announces-full-cast/">
-    <div class="buzz__image-container--small">
-      <img class="buzz__image--small lazyloaded" width="107" height="80" src="https://imaging.broadway.com/images/regular-43/w345/124669-9.jpg">
-    </div>
-    <div class="buzz__text--small">
-      <div class="buzz__category">
-        News
-      </div>
-      <div class="buzz__title--small">
-        <i>
-          Once Upon a One More Time
-        </i>
-        Announces Full Cast
-      </div>
-    </div>
-  </a>
-  <div class="buzz__divider">
-  </div>
-  <a class="buzz__card--small" href="/buzz/203154/mrs-doubtfire-to-launch-north-american-tour/">
-    <div class="buzz__image-container--small">
-      <img class="buzz__image--small lazyloaded" width="107" height="80" src="https://imaging.broadway.com/images/regular-43/w345/121359-14.jpg">
-    </div>
-    <div class="buzz__text--small">
-      <div class="buzz__category">
-        News
-      </div>
-      <div class="buzz__title--small">
-        <i>
-          Mrs. Doubtfire
-        </i>
-        to Launch North American Tour
-      </div>
-    </div>
-  </a>
-</div> -->
+</ul>

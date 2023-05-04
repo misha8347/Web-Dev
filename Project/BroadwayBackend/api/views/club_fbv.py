@@ -1,12 +1,13 @@
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated, AllowAny
 
 from api.models import Club, News, Event
 from api.serializers import ClubSerializer, NewsSerializer, EventSerializer
 
 @api_view(['GET', 'POST'])
-# @permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def club_list(request):
     if request.method == 'GET':
         clubs = Club.objects.all()
@@ -21,7 +22,7 @@ def club_list(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 @api_view(['GET', 'PUT', 'DELETE'])
-# @permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def club_detail(request, club_id):
     try:
         club = Club.objects.get(id=club_id)
@@ -44,6 +45,7 @@ def club_detail(request, club_id):
         return Response({'deleted': 'true'})
 
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def club_news(request, club_id):
     try:
         club = Club.objects.get(id=club_id)
@@ -56,6 +58,7 @@ def club_news(request, club_id):
         return Response(serializer.data)
     
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def club_events(request, club_id):
     try:
         club = Club.objects.get(id=club_id)

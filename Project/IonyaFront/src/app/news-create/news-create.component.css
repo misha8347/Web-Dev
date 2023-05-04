@@ -1,0 +1,21 @@
+.news-create{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.field{
+    font-size: 16px;
+    width: 400px;
+}
+
+.button{
+    margin: 25px;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.clubs-select{
+    width: 400px;
+    font-size: 24px;
+}
